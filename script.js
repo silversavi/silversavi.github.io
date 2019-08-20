@@ -6,6 +6,9 @@ var body = document.getElementById("gradient");
 var dirId = document.getElementById("direction");
 
 
+
+
+
 function changeBackground(){
    
     var direction = dirId.value
@@ -34,14 +37,14 @@ function changeBackgroundDirection(){
 }
 
 function copyToClipboard() {
-  /* Get the text field */
-  var copyText = css.innerText;
-  console.log(copyText)
-  copyText.select;
-  /* Copy the text inside the text field */
-  document.execCommand("copy");
-  alert("Copied the following text to clipboard: \n" + copyText)
-}
+                    var range = document.createRange();
+                    range.selectNode(document.getElementById("tocopy"));
+                    window.getSelection().removeAllRanges(); // clear current selection
+                    window.getSelection().addRange(range); // to select text
+                    document.execCommand("copy");
+                    window.getSelection().removeAllRanges();// to deselect
+                }
+
 
 function changeTextColor() {
     var example = document.getElementById("example");

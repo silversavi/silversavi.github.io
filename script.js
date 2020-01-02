@@ -1,3 +1,4 @@
+// VARIABLES
 var css = document.querySelector("h3");
 var color1 = document.querySelector(".color1");
 var color2 = document.querySelector(".color2");
@@ -6,9 +7,9 @@ var body = document.getElementById("gradient");
 var dirId = document.getElementById("direction");
 
 
+// FUNCTIONS
 
-
-
+// changing bg color
 function changeBackground(){
    
     var direction = dirId.value
@@ -23,6 +24,7 @@ function changeBackground(){
     css.textContent = body.style.background + ";";
 }
 
+//changing bg color direction
 function changeBackgroundDirection(){
     var direction = dirId.value;
     body.style.background = 
@@ -36,6 +38,8 @@ function changeBackgroundDirection(){
     css.textContent = body.style.background + ";";
 }
 
+
+//copyToClipboard functionality
 function copyToClipboard() {
                     var range = document.createRange();
                     range.selectNode(document.getElementById("tocopy"));
@@ -52,6 +56,7 @@ function changeTextColor() {
 }
 
 
+//adding event listeners
 color1.addEventListener("input", changeBackground);
 color2.addEventListener("input", changeBackground);
 color3.addEventListener("input", changeTextColor);

@@ -11,7 +11,7 @@ body {
     letter-spacing: .5em;
     top: 15%;
     height: 100vh;
-    background: linear-gradient(to bottom, #013f9c, #fdffa4);
+    background: linear-gradient(to right, #013f9c, #fdffa4);
 }
 
 h1 {
